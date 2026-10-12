@@ -568,13 +568,13 @@ class MCPClient:
                         tool_info = {
                             "name": tool.name,
                             "server": server_name,
-                            "description": getattr(tool, "description", ""),
+                            "description": getattr(tool, "description", "") or "",
                         }
                     else:  # full
                         tool_info = {
                             "name": tool.name,
                             "server": server_name,
-                            "description": getattr(tool, "description", ""),
+                            "description": getattr(tool, "description", "") or "",
                             "input_schema": getattr(tool, "inputSchema", {}),
                         }
 
